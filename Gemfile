@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 # Use dependencies from gemspec
 gemspec
 
+gem 'parser', '2.3.0.pre.6' # WORK-AROUND for Ruby 2.2.4
+
 # Debug aruba
 group :debug do
   if RUBY_VERSION >= '2' && !RUBY_PLATFORM.include?('java')
