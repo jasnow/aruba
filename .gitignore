@@ -35,3 +35,7 @@ cucumber-pro.log
 
 # Temp files of yar
 .yardoc
+
+# Added these files to not force others to use them.
+.gitignore
+.overcommit.yml
