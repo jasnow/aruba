@@ -21,7 +21,7 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'thor', '~> 0.19'
   s.add_runtime_dependency 'event-bus', '~> 0.2'
 
-  s.add_development_dependency 'bundler', '~> 1.11.0'
+  s.add_development_dependency 'bundler', '~> 1.11'
 
   s.rubygems_version = ">= 1.6.1"
 
@@ -35,7 +35,7 @@ Use on ruby 1.8.7
 * Make sure you add something like that to your `Gemfile`. Otherwise you will
   get cucumber > 2 and this will fail on ruby 1.8.7
 
-  gem 'cucumber', ~> '1.3.20'
+  gem 'cucumber', '~> 1.3.20'
 
 With aruba >= 1.0 there will be breaking changes. Make sure to read https://github.com/cucumber/aruba/blob/master/History.md for 1.0.0
 EOS
