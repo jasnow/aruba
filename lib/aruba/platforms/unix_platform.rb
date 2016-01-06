@@ -14,6 +14,7 @@ require 'aruba/platforms/local_environment'
 require 'aruba/platforms/aruba_logger'
 require 'aruba/platforms/announcer'
 require 'aruba/platforms/command_monitor'
+require 'aruba/platforms/filesystem_status'
 
 # Aruba
 module Aruba
@@ -39,6 +40,10 @@ module Aruba
 
       def command_string
         UnixCommandString
+      end
+
+      def filesystem_status
+        FilesystemStatus
       end
 
       def announcer
@@ -71,6 +76,10 @@ module Aruba
 
       def with_environment(env = {}, &block)
         LocalEnvironment.new.call(env, &block)
+      end
+
+      def default_shell
+        'bash'
       end
 
       def detect_ruby(cmd)
@@ -245,8 +254,8 @@ module Aruba
       end
 
       # Transform hash to a string table which can be output on stderr/stdout
-      def simple_table(hash)
-        SimpleTable.new(hash).to_s
+      def simple_table(hash, opts = {})
+        SimpleTable.new(hash, opts).to_s
       end
 
       # Resolve path for command using the PATH-environment variable
