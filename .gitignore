@@ -37,5 +37,4 @@ cucumber-pro.log
 .yardoc
 
 # Added these files to not force others to use them.
-.gitignore
 .overcommit.yml
